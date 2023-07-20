@@ -1,0 +1,108 @@
+{
+  "NavBar": {
+    "title1": "Home",
+    "title2": "About us",
+    "title3": "Qualifications",
+    "title4": "Advantages",
+    "title5": "Testimonials",
+    "title6": "Requirements",
+    "title7": "Register"
+  },
+  "Footer": {
+    "title1": "About us",
+    "title2": "Qualifications",
+    "title3": "Advantages",
+    "title4": "Testimonials",
+    "title5": "Requirements",
+    "desc": "ATHE is a global organization that awards programmes, diplomas, credits and qualifications regulated by ofqual and other UK and international regulators since 2011.",
+    "supTitle1": "Communication",
+    "supTitle2": "Links",
+    "supTitle3": "Popular links",
+    "copyright": "All rights reserved to Global Studies for Training and Education"
+  },
+  "Header": {
+    "title": "British Bachelor's degree approved by the Top-Up system from the British Accreditation Authority ATHE",
+    "desc": "ATHE is a global organization that awards programmes, diplomas, credits and qualifications and has been organized by ofqual and other UK and international regulators since 2011.",
+    "btn": "Register now"
+  },
+  "About": {
+    "title1": "About us",
+    "title2": "British BA ATHE",
+    "desc1": "ATHE is a global organization that awards programmes, diplomas, credits and qualifications and has been organized by ofqual and other UK and international regulators since 2011.",
+    "desc2": "It works with over 280 recognized centers across the UK to complement its strong brand presence in the UK. ATHE offers a wide range of vocationally oriented and internationally recognized qualifications from Levels 3 to 7 - such as Business, Management, Accountancy, Law, Computing and Healthcare",
+    "count1": "Centers",
+    "count2": "Students",
+    "btn": "Read more"
+  },
+  "Education": {
+    "title1": "Qualifications",
+    "title2": "Higher Education Programs",
+    "supTile1": "Business Administration",
+    "supTile2": "Healthcare Management",
+    "supTile3": "Computing and Information Technology",
+    "btn": "Read more",
+    "btn2": "Join us now"
+  },
+  "Servcies": {
+    "supTitle1": "Advantages",
+    "supTitle2": "Why should you study with us?",
+    "title1": "The ATHE is a British accreditation institution present in more than 55 countries around the world in more than 289 internationally accredited centers.",
+    "title2": "ATHE qualifications are fully accredited and monitored by the UK Qualifications and Curriculum Regulatory Authority Ofqual.",
+    "title3": "A certificate with global accreditation from the oldest British groups that enables you to obtain prestigious job opportunities in all countries of the world.",
+    "title4": "A flexible study system that allows you to study at the time and place you want without interrupting your work.",
+    "title5": "High employment rate for graduates of prestigious and internationally accredited British universities.",
+    "title6": "Teaching by a group of university professors and business experts in the Arab world and around the world.",
+    "title7": "Teaching in Arabic and English.",
+    "title8": "Availability of an academic advisor to help you address weaknesses and deficiencies in academic performance during your study journey.",
+    "title9": "You can obtain a bachelor's degree in a period ranging from two and a half to three years at most, which means saving effort, time and money.",
+    "title10": "Multiple teaching styles in Arabic and English that allow the student to choose between different teaching styles (presence education - blended education - online education).",
+    "title11": "Low tuition fees compared to other universities and flexible payment systems.",
+    "title12": "Obtaining a UK work visa."
+  },
+  "Testominal": {
+    "supTitleee1": "Testimonials",
+    "supTitleee2": "Our customers' opinions",
+    "title1": "Khaled Al Balushi",
+    "subTitle1": "English teacher",
+    "desc1": "In the name of God, the Most Compassionate, the Most Merciful. One of the most important advantages offered by the Global Studies Group is that these courses are considered academic credit hours when the student takes academic credit hours, and this qualifies him to study in academically accredited universities in Britain.",
+    "title2": "Walid Mahmoud",
+    "subTitle2": "English teacher",
+    "desc2": "One of the most important factors that attracts anyone who wants to complete his education is flexibility, which is provided by the Global Studies Group through different educational systems. A person can complete an education either by attending directly, either online or blended learning. What is meant by blended learning is that the student can attend one lecture. weekly and continues his studies online.",
+    "title3": "Hussein Hatem",
+    "subTitle3": "English Debate Coach",
+    "desc3": "The strength of any course or course is determined by several factors. First: Your certificate, like anyone who wants to take a certificate, must be internationally accredited. Second: The trainers must be at the highest level. Third: Flexibility in timing. Anyone who misses anything or any part of the lecture can skip it. That is, in an alternative",
+    "title4": "Hussein Hatem",
+    "subTitle4": "English Debate Coach",
+    "desc4": "The strength of any course or course is determined by several factors. First: Your certificate, like anyone who wants to take a certificate, must be internationally accredited. Second: The trainers must be at the highest level. Third: Flexibility in timing. Anyone who misses anything or any part of the lecture can skip it. That is, in an alternative"
+  },
+  "Requests": {
+    "supTitle1": "Requirements",
+    "supTitle2": "Admission requirements",
+    "title1": "Passport photo",
+    "title2": "CV",
+    "title3": "3 white background personal photos",
+    "title4": "High school certificate translated into English",
+    "title5": "Approved registration form",
+    "title6": "Completing the payment of administrative fees and attaching the payment receipt"
+  },
+  "Form": {
+    "toaste": "You have registered successfully",
+    "supTitle1": "Register",
+    "supTitle2": "Register with us now",
+    "required1": "Please enter the name",
+    "placeholder1": "Fourfold name",
+    "required2": "Please enter the age",
+    "placeholder2": "Age",
+    "required3": "Please enter the phone number",
+    "placeholder3": "Phone number with country code",
+    "required4": "Please enter your e-mail",
+    "subRequired4": "The email is not valid",
+    "placeholder4": "E-mail",
+    "required5": "Please enter the position or not",
+    "placeholder5": "Job or profession",
+    "required6": "Please enter the qualification or not",
+    "placeholder6": "The last qualification you obtained",
+    "btn": "Register now",
+    "loadingBtn": "Loading...."
+  }
+}
