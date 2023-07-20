@@ -143,7 +143,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder1}
               />
               {errors?.user_name && (
@@ -163,7 +162,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder2}
               />
               {errors?.user_age && (
@@ -187,7 +185,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder3}
               />
               {errors?.user_phone && (
@@ -211,7 +208,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder4}
               />
               {errors?.user_email && (
@@ -235,7 +231,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder5}
               />
               {errors?.user_jop && (
@@ -255,7 +250,6 @@ export default function RegesterForm({
                     ? "border-[rgb(239,68,68)]"
                     : "border-[#ced4da]"
                 }`}
-                autoFocus
                 placeholder={placeholder6}
               />
               {errors?.user_quli && (

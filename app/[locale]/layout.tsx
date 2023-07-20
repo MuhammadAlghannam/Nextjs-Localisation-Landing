@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Global Solutions for Training and Education  Platform, Teaching, E-Learning",
     //url: "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app",
     siteName: "Global Solutions for Training and Education",
-    locale: "ar-SA",
+    locale: "ar",
     type: "website",
   },
 };

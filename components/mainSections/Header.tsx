@@ -18,7 +18,7 @@ interface HeaderProps {
 
 export default function Header({ title, desc, btn, locale }: HeaderProps) {
   return (
-    <header
+    <section
       id="home"
       className={`${locale === "en" ? "hero-header2" : "hero-header "}`}
     >
@@ -48,18 +48,7 @@ export default function Header({ title, desc, btn, locale }: HeaderProps) {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, ease: "easeIn" }}
           >
-            <Link
-              to="regest"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              <CustomButton
-                title={btn}
-                containerStyles="bg-secondary font-semibold text-md text-white rounded-full hover:bg-yellowHover w-[50%] shadow-sm"
-              />
-            </Link>
+            
           </motion.div>
         </div>
         {/* left */}
@@ -82,6 +71,6 @@ export default function Header({ title, desc, btn, locale }: HeaderProps) {
           </motion.div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }
