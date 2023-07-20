@@ -18,8 +18,10 @@ interface HeaderProps {
 
 export default function Header({ title, desc, btn, locale }: HeaderProps) {
   return (
-    <header id="home" className="relative hero-header">
-      <div className={`absolute bottom-[-7px] w-full h-[430px] ${locale === 'en' ? "bg-header-bg2" : "bg-header-bg"} bg__hero `} />
+    <header
+      id="home"
+      className={`${locale === "en" ? "hero-header2" : "hero-header "}`}
+    >
       <div className="max-w-[1440px] mx-auto sm:px-16 px-6 flex md:flex-row flex-col justify-center items-start xl:mt-[-2em] mt-[-5em]">
         {/* right */}
         <div className="flex-1 w-full h-[500px]">
@@ -61,7 +63,7 @@ export default function Header({ title, desc, btn, locale }: HeaderProps) {
           </motion.div>
         </div>
         {/* left */}
-        <div className="z-10 flex-1 w-full">
+        <div className="flex-1 w-full">
           <motion.div
             initial={{ y: "2.5em", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

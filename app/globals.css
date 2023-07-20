@@ -41,20 +41,29 @@
   margin-bottom: 6rem;
   padding: 16rem 0 0 0;
   background: url(../public/bg-circle.png), url(../public/bg-triangle.png),
+    url(../public/bg-bottom.png),
     linear-gradient(to bottom right, var(--primary), var(--secondary));
   background-size: auto, auto, 100%;
   background-position: right 0px top 0px, left -10px top 40%, center bottom;
   background-repeat: no-repeat;
 }
 
-.bg__hero {
-  background-size: 100%;
-  background-position: center bottom;
+.hero-header2 {
+  margin-bottom: 6rem;
+  padding: 16rem 0 0 0;
+  background: url(../public/bg-circle.png), url(../public/bg-triangle.png),
+    url(../public/bg-bottom2.png),
+    linear-gradient(to bottom right, var(--primary), var(--secondary));
+  background-size: auto, auto, 100%;
+  background-position: right 0px top 0px, left -10px top 40%, center bottom;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 1060) {
   .hero-header {
+    padding: 6rem 0 9rem 0;
+  }
+  .hero-header2 {
     padding: 6rem 0 9rem 0;
   }
 }
@@ -64,15 +73,21 @@
   margin-top: 6rem;
   padding: 14rem 0 0 0;
   background: url(../public/bg-circle.png), url(../public/bg-triangle.png),
+    url(../public/bg-top.png),
     linear-gradient(to bottom right, var(--primary), var(--secondary));
-  background-size: auto, auto;
-  background-position: right 0px bottom 0px, left 15px top 75%;
+  background-size: auto, auto, 100%;
+  background-position: right 0px bottom 0px, left 15px top 75%, center top;
   background-repeat: no-repeat;
 }
 
-.bg__hero2 {
-  background-size: 100%;
-  background-position: center top;
+.hero-footer2 {
+  margin-top: 6rem;
+  padding: 14rem 0 0 0;
+  background: url(../public/bg-circle.png), url(../public/bg-triangle.png),
+    url(../public/bg-top2.png),
+    linear-gradient(to bottom right, var(--primary), var(--secondary));
+  background-size: auto, auto, 100%;
+  background-position: right 0px bottom 0px, left 15px top 75%, center top;
   background-repeat: no-repeat;
 }
 

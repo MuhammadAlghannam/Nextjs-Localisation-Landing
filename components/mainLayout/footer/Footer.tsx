@@ -43,18 +43,17 @@ export default function Footer({
   supTitle2,
   supTitle3,
   copyright,
-  locale
+  locale,
 }: FooterProps) {
   const { footerLinks } = useFooterLinks(
     title1,
     title2,
     title3,
     title4,
-    title5,
+    title5
   );
   return (
-    <footer className="relative hero-footer">
-      <div className={`absolute top-[-7px] w-full h-[430px] ${locale === 'en' ? "bg-footer-bg2" : "bg-footer-bg"} bg__hero2 `} />
+    <footer className={`${locale === "en" ? "hero-footer2" : "hero-footer"}`}>
       <div className="max-w-[1440px] mx-auto sm:px-16 px-6 sm:pt-[2.5em] pt-0 pb-[1.5em] grid grid-flow-row sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-4">
         <div>
           <Image
