@@ -31,7 +31,7 @@ export default function NavBar({
   return (
     <nav
       style={{ backgroundColor: `${color}` }}
-      className={`fixed left-0 right-0 top-0 w-full py-5 z-10`}
+      className={`fixed left-0 right-0 top-0 w-full py-5 z-50`}
     >
       <div className="flex justify-between items-center max-w-[1440px] mx-auto sm:px-16 px-6">
         {/* Logo Image */}

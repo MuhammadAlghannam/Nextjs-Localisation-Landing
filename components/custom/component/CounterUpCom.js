@@ -15,12 +15,7 @@ import ScrollTrigger from "react-scroll-trigger";
 // animation
 import { motion } from "framer-motion";
 
-interface CounterProps {
-  count1: string;
-  count2: string;
-}
-
-export default function CounterUpCom({ count1, count2 }: CounterProps) {
+export default function CounterUpCom({ count1, count2 }) {
   const [counterOn, setCounterOn] = useState(false);
 
   return (

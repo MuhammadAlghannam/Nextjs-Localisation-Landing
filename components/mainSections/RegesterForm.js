@@ -19,27 +19,6 @@ import { toast } from "react-toastify";
 // emailjs
 import emailjs from "@emailjs/browser";
 
-interface RegesterFormProps {
-  toaste: string;
-  supTitle1: string;
-  supTitle2: string;
-  required1: string;
-  placeholder1: string;
-  required2: string;
-  placeholder2: string;
-  required3: string;
-  placeholder3: string;
-  required4: string;
-  subRequired4: string;
-  placeholder4: string;
-  required5: string;
-  placeholder5: string;
-  required6: string;
-  placeholder6: string;
-  btn: string;
-  loadingBtn: string;
-}
-
 export default function RegesterForm({
   toaste,
   supTitle1,
@@ -59,7 +38,7 @@ export default function RegesterForm({
   placeholder6,
   btn,
   loadingBtn,
-}: RegesterFormProps) {
+}) {
   const [loading, setLoading] = useState(false);
   const form = useRef();
 
