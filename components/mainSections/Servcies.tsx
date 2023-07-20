@@ -10,7 +10,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 import TopHead from "../custom/component/TopHead";
 
 // animation
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 interface ServciesProps {
   locale: string;
@@ -68,39 +68,41 @@ export default function Servcies({
       <TopHead title={supTitle1} desc={supTitle2} />
 
       <div className="flex flex-wrap mt-[4em]">
-        {servciesData.map((items) => (
-          <motion.div
-            initial={{
-              y: items.animateY,
-              opacity: 0,
-            }}
-            transition={{
-              duration: 0.7,
-            }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            key={items.id}
-            className={`box ${
-              locale === "en"
-                ? "border-l-[0.1em] pl-[2.8rem]"
-                : "border-r-[0.1em] pr-[2.8rem]"
-            } border-[#aaaaaa]`}
-          >
-            <div
-              className={`absolute top-[-0.5em] ${
-                locale === "en" ? "left-[-1.2em]" : "right-[-1.2em]"
-              } p-2 rounded-full bg-primary`}
+        <LazyMotion features={domAnimation}>
+          {servciesData.map((items) => (
+            <m.div
+              initial={{
+                y: items.animateY,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.7,
+              }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              key={items.id}
+              className={`box ${
+                locale === "en"
+                  ? "border-l-[0.1em] pl-[2.8rem]"
+                  : "border-r-[0.1em] pr-[2.8rem]"
+              } border-[#aaaaaa]`}
             >
-              <CheckIcon className="w-5 h-5 text-white " />
-            </div>
-            <span className="px-[1.5em] py-[0.4em] rounded-2xl text-lg text-white font-semibold bg-primary">
-              {items.id}
-            </span>
-            <p className="font-medium text-[1rem] text-mainBalck mt-[1.2em] mb-[0.5em]">
-              {items.title}
-            </p>
-          </motion.div>
-        ))}
+              <div
+                className={`absolute top-[-0.5em] ${
+                  locale === "en" ? "left-[-1.2em]" : "right-[-1.2em]"
+                } p-2 rounded-full bg-primary`}
+              >
+                <CheckIcon className="w-5 h-5 text-white " />
+              </div>
+              <span className="px-[1.5em] py-[0.4em] rounded-2xl text-lg text-white font-semibold bg-primary">
+                {items.id}
+              </span>
+              <p className="font-medium text-[1rem] text-mainBalck mt-[1.2em] mb-[0.5em]">
+                {items.title}
+              </p>
+            </m.div>
+          ))}
+        </LazyMotion>
       </div>
     </section>
   );

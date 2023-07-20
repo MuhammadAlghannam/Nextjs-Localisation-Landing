@@ -1,13 +1,19 @@
+// Nextjs
+import dynamic from "next/dynamic";
+
 // componenets
-import {
-  AboutUs,
-  Header,
-  Education,
-  Servcies,
-  Testomoinal,
-  Requests,
-  RegesterForm,
-} from "@/components/mainSections";
+const AboutUs = dynamic(() => import("@/components/mainSections/AboutUs"));
+const Header = dynamic(() => import("@/components/mainSections/Header"));
+const Education = dynamic(() => import("@/components/mainSections/Education"));
+const Servcies = dynamic(() => import("@/components/mainSections/Servcies"));
+const Testomoinal = dynamic(
+  () => import("@/components/mainSections/Testomoinal")
+);
+const Requests = dynamic(() => import("@/components/mainSections/Requests"));
+const RegesterForm = dynamic(
+  () => import("@/components/mainSections/RegesterForm")
+);
+
 import MyScrollToTop from "@/components/custom/component/MyScrollToTop";
 
 // translate
@@ -84,6 +90,12 @@ export default function Home() {
           title4={tTestominal("title4")}
           subTitle4={tTestominal("subTitle4")}
           desc4={tTestominal("desc4")}
+          title5={tTestominal("title5")}
+          subTitle5={tTestominal("subTitle5")}
+          desc5={tTestominal("desc5")}
+          title6={tTestominal("title6")}
+          subTitle6={tTestominal("subTitle6")}
+          desc6={tTestominal("desc6")}
         />
         <Requests
           supTitle1={tRequests("supTitle1")}

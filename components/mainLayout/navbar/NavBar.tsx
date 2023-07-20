@@ -35,7 +35,14 @@ export default function NavBar({
     >
       <div className="flex justify-between items-center max-w-[1440px] mx-auto sm:px-16 px-6">
         {/* Logo Image */}
-        <Link to="home" spy={true} smooth={true} offset={-100} duration={500}>
+        <Link
+          to="home"
+          href="#home"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
           <Image
             src={image}
             alt="logo"

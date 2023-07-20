@@ -44,4 +44,5 @@ export interface NavUlProps {
   ulStyle: string;
   liStyle?: string;
   linkStyle: string;
+  handleMenu?: () => void;
 }

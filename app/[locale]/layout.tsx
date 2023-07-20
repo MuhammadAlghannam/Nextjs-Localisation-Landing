@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   description:
     "Global Solutions for Training and Education  Platform, Teaching, E-Learning",
   applicationName: "Global Solutions for Training and Education",
-  keywords: ["Education", "دراسه", "تعليم", "جامعي"],
+  keywords: ["Education", "دراسه", "تعليم", "جامعي", "Bachelor", "بكالوريوس"],
   //url: "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app",
   // metadataBase: new URL(
   //   "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app"
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Global Solutions for Training and Education  Platform, Teaching, E-Learning",
     //url: "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app",
     siteName: "Global Solutions for Training and Education",
-    locale: "ar",
+    locale: "ar_SA",
     type: "website",
   },
 };

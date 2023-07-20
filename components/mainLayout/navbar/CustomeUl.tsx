@@ -10,6 +10,7 @@ export default function CustomeUl({
   ulStyle,
   liStyle,
   linkStyle,
+  handleMenu,
 }: NavUlProps) {
   return (
     <ul className={`${ulStyle}`}>
@@ -17,12 +18,14 @@ export default function CustomeUl({
         <li key={link.id} className={`${liStyle}`}>
           <Link
             to={link.id}
+            href={link.id}
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
             style={{ color: `${textColor}` }}
             className={`${linkStyle}`}
+            onClick={handleMenu}
           >
             {link.title}
           </Link>

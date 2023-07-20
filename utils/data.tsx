@@ -243,7 +243,13 @@ export const useTestomoinalData = (
   desc3: string,
   title4: string,
   subTitle4: string,
-  desc4: string
+  desc4: string,
+  title5: string,
+  subTitle5: string,
+  desc5: string,
+  title6: string,
+  subTitle6: string,
+  desc6: string
 ) => {
   const testomoinalData = [
     {
@@ -269,6 +275,18 @@ export const useTestomoinalData = (
       title: title4,
       suptitle: subTitle4,
       desc: desc4,
+    },
+    {
+      id: "test-5",
+      title: title5,
+      suptitle: subTitle5,
+      desc: desc5,
+    },
+    {
+      id: "test-6",
+      title: title6,
+      suptitle: subTitle6,
+      desc: desc6,
     },
   ];
 

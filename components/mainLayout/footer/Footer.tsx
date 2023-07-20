@@ -64,7 +64,7 @@ export default function Footer({
             priority
             className="object-contain"
           />
-          <p className="font-medium md:text-lg text-[0.9rem] my-[1em] text-white">
+          <p className="font-medium text-[0.9rem] my-[1em] text-white">
             {desc}
           </p>
 
@@ -73,6 +73,7 @@ export default function Footer({
             <div className="p-2 transition-all border border-white rounded-full hover:bg-[#3b5998]">
               <a
                 href="https://www.facebook.com/Globalstudiesegy"
+                aria-label="facebook"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -90,6 +91,7 @@ export default function Footer({
             <div className="p-2 transition-all border border-white rounded-full hover:bg-[#C13584]">
               <a
                 href="https://www.instagram.com/officialglobalstudiesegypt/"
+                aria-label="instagram"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -105,7 +107,12 @@ export default function Footer({
               </a>
             </div>
             <div className="p-2 transition-all border border-white rounded-full hover:bg-primary">
-              <a href="https://gste-edu.com/" rel="noreferrer" target="_blank">
+              <a
+                href="https://gste-edu.com/"
+                aria-label="website"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <GlobeAltIcon className="w-[1.3rem] h-[1.3rem] text-white" />
               </a>
             </div>
@@ -125,11 +132,19 @@ export default function Footer({
             </div>
             <div className="flex items-start justify-start gap-3 my-[1em]">
               <PhoneIcon className="w-[1.3rem] h-[1.3rem] text-white" />
-              <p className="font-medium text-[1rem] text-white ">
-                1508347636 20+{" "}
-                <span className="mx-[0.5em] font-semibold">-</span> 30577880
-                974+
-              </p>
+              {locale === "en" ? (
+                <p className="font-medium text-[1rem] text-white ">
+                  +20 1508347636{" "}
+                  <span className="mx-[0.5em] font-semibold">-</span>+974
+                  30577880
+                </p>
+              ) : (
+                <p className="font-medium text-[1rem] text-white ">
+                  1508347636 20+{" "}
+                  <span className="mx-[0.5em] font-semibold">-</span> 30577880
+                  974+
+                </p>
+              )}
             </div>
             <div className="flex items-start justify-start gap-3">
               <EnvelopeIcon className="w-[1.3rem] h-[1.3rem] text-white" />
@@ -149,6 +164,7 @@ export default function Footer({
                 <Link
                   activeClass="active"
                   to={link.id}
+                  href={link.id}
                   spy={true}
                   smooth={true}
                   offset={-100}
@@ -172,6 +188,7 @@ export default function Footer({
                 <Link
                   activeClass="active"
                   to={link.id}
+                  href={link.id}
                   spy={true}
                   smooth={true}
                   offset={-100}

@@ -14,7 +14,7 @@ import CustomButton from "@/components/custom/component/CustomButton";
 import CustomeUl from "./CustomeUl";
 
 // animation
-import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
 
 // next intl
 import Link from "next-intl/link";
@@ -78,40 +78,43 @@ export default function MaiHumbyrgerListnList({
 
       <AnimatePresence>
         {menu && (
-          <motion.div
-            key="menu"
-            initial={{ y: "5em", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "5em", opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className={`flex flex-col justify-center gap-5 p-6 bg-primary absolute top-20 ${
-              locale === "en" ? "right-0" : "left-0"
-            } mx-4 my-2 min-w-[200px] rounded-xl z-10 sidebar `}
-          >
-            {/* nav list */}
-            <CustomeUl
-              navLinks={navLinks}
-              ulStyle="flex flex-col items-center gap-5"
-              linkStyle="font-semibold text-white text-md"
-            />
+          <LazyMotion features={domAnimation}>
+            <m.div
+              key="menu"
+              initial={{ y: "5em", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "5em", opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className={`flex flex-col justify-center gap-5 p-6 bg-primary absolute top-20 ${
+                locale === "en" ? "right-0" : "left-0"
+              } mx-4 my-2 min-w-[200px] rounded-xl z-10 sidebar `}
+            >
+              {/* nav list */}
+              <CustomeUl
+                navLinks={navLinks}
+                handleMenu={handleMenu}
+                ulStyle="flex flex-col items-center gap-5"
+                linkStyle="font-semibold text-white text-md"
+              />
 
-            {/* button */}
-            {locale === "en" ? (
-              <Link href="/" locale="ar" className="text-center">
-                <CustomButton
-                  title="Ar"
-                  containerStyles="bg-secondary font-semibold text-md text-white rounded-full hover:bg-yellowHover"
-                />
-              </Link>
-            ) : (
-              <Link href="/" locale="en" className="text-center">
-                <CustomButton
-                  title="En"
-                  containerStyles="bg-secondary font-semibold text-md text-white rounded-full hover:bg-yellowHover"
-                />
-              </Link>
-            )}
-          </motion.div>
+              {/* button */}
+              {locale === "en" ? (
+                <Link href="/" locale="ar" className="text-center">
+                  <CustomButton
+                    title="Ar"
+                    containerStyles="bg-secondary font-semibold text-md text-white rounded-full hover:bg-yellowHover"
+                  />
+                </Link>
+              ) : (
+                <Link href="/" locale="en" className="text-center">
+                  <CustomButton
+                    title="En"
+                    containerStyles="bg-secondary font-semibold text-md text-white rounded-full hover:bg-yellowHover"
+                  />
+                </Link>
+              )}
+            </m.div>
+          </LazyMotion>
         )}
       </AnimatePresence>
     </div>
