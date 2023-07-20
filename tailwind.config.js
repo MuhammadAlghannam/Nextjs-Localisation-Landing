@@ -15,13 +15,6 @@ module.exports = {
         yellowHover: "rgb(202,138,4)",
       },
 
-      backgroundImage: {
-        "header-bg": "url('/bg-bottom.png')",
-        "header-bg2": "url('/bg-bottom2.png')",
-        "footer-bg": "url('/bg-top.png')",
-        "footer-bg2": "url('/bg-top2.png')",
-      },
-
       screens: {
         xs: "480px",
         ss: "620px",
