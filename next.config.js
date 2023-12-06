@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp']
+  }
+};
 
 const withNextIntl = require("next-intl/plugin")(
   // This is the default (also the `src` folder is supported out of the box)

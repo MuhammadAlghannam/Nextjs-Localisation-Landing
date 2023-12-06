@@ -24,7 +24,10 @@ const almarai = Almarai({ subsets: ["arabic"], weight: ["300", "400", "700"] });
 
 // metaData
 export const metadata: Metadata = {
-  title: "Global Solutions for Training and Education",
+  title: {
+    default: "Global Solutions for Training and Education",
+    template: `%s | Global Solutions for Training and Education`,
+  },
   description:
     "Global Solutions for Training and Education  Platform, Teaching, E-Learning",
   applicationName: "Global Solutions for Training and Education",
@@ -33,14 +36,34 @@ export const metadata: Metadata = {
   // metadataBase: new URL(
   //   "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app"
   // ),
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+  colorScheme: "normal",
+  creator: "Muhammad Samir",
+  publisher: "Muhammad Samir",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "Global Solutions for Training and Education",
     description:
       "Global Solutions for Training and Education  Platform, Teaching, E-Learning",
+    images: [
+      {
+        url: "/golbal-logo-removebg.png",
+        width: 400,
+        height: 300,
+      },
+    ],
     //url: "https://nextjs-13-full-stack-ecommerce-l26ssvc4k-muhammadsamir1212.vercel.app",
     siteName: "Global Solutions for Training and Education",
     locale: "ar_SA",
     type: "website",
+  },
+  verification: {
+    google: "",
   },
 };
 

@@ -29,7 +29,7 @@ export default function NavBar({
   const { color, hamColor, textColor, image } = useScroll();
 
   return (
-    <nav
+    <header
       style={{ backgroundColor: `${color}` }}
       className={`fixed left-0 right-0 top-0 w-full py-5 z-50`}
     >
@@ -48,7 +48,7 @@ export default function NavBar({
             alt="logo"
             width={145}
             height={45}
-            priority
+            quality={60}
             className="object-contain cursor-pointer"
           />
         </Link>
@@ -83,6 +83,6 @@ export default function NavBar({
           />
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

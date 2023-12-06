@@ -60,7 +60,7 @@ export default function MaiHumbyrgerListnList({
   };
 
   return (
-    <div>
+    <>
       {/* bars and times */}
       {menu ? (
         <XMarkIcon
@@ -117,6 +117,6 @@ export default function MaiHumbyrgerListnList({
           </LazyMotion>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }

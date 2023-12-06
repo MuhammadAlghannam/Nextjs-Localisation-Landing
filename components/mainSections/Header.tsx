@@ -9,6 +9,10 @@ import CustomButton from "../custom/component/CustomButton";
 // scroll
 import { Link } from "react-scroll";
 
+// video player
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
+
 interface HeaderProps {
   title: string;
   desc: string;
@@ -26,14 +30,14 @@ export default function Header({ title, desc, btn, locale }: HeaderProps) {
         {/* right */}
         <div className="flex-1 w-full h-[500px]">
           <LazyMotion features={domAnimation}>
-            <m.h2
+            <m.h1
               initial={{ y: "1em", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, ease: "easeIn" }}
               className="font-semibold md:text-[2.3rem] text-[1.6rem] text-white"
             >
               {title}
-            </m.h2>
+            </m.h1>
             <m.p
               initial={{ y: "1.5em", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -74,15 +78,15 @@ export default function Header({ title, desc, btn, locale }: HeaderProps) {
               transition={{ duration: 0.4, ease: "easeIn" }}
               className="mt-7 md:w-[500px] w-full mx-auto"
             >
-              <iframe
-                width={550}
-                height={300}
-                src="https://www.youtube.com/embed/u_gisj12yPI"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+              <Video
+                autoPlay
+                loop
+                controls={["PlayPause", "Seek", "Time", "Volume", "Fullscreen"]}
+                poster="global-logo.jpg"
                 className="w-full border-2 rounded-md shadow-sm border-primary"
-              />
+              >
+                <source src="/slotion-video-intro.webm" type="video/webm" />
+              </Video>
             </m.div>
           </LazyMotion>
         </div>

@@ -18,8 +18,6 @@ import { toast } from "react-toastify";
 
 // emailjs
 import emailjs from "@emailjs/browser";
-import { EduModelProps } from "@/types";
-import EduModle from "./../custom/component/EduModle";
 
 export default function RegesterForm({
   toaste,
@@ -44,45 +42,12 @@ export default function RegesterForm({
   const [loading, setLoading] = useState(false);
   const form = useRef();
 
-  // // images
-  // const [idImage, setIdImage] = useState("");
-  // const [passImage, setPassImage] = useState("");
-  // const [personalImage, setPersonalImage] = useState("");
-  // const [mw2hlImage, setMw2hlImage] = useState("");
-  // const [thanawyaImage, setThanawyaImage] = useState("");
-  // const [deplomaImage, setDeplomaImage] = useState("");
-  // const [cvImage, setCvImage] = useState("");
-
-  // // handle idImage
-  // const handleIdImageUpload = (e: React.FormEvent<HTMLFormElement>) => {
-  //   setIdImage(e.target.files[0]);
-  //   const formData = new FormData();
-  //   formData.append("image", idImage);
-  // };
-
-  // // handle passImage
-  // const handlePassImageUpload = () => {};
-
-  // // handle personalImage
-  // const handlePersonalImageUpload = () => {};
-
-  // // handle mw2hlImage
-  // const handleMw2hlImageUpload = () => {};
-
-  // // handle thanawyaImage
-  // const handleThanawyaImageUpload = () => {};
-
-  // // handle deplomaImage
-  // const handleDeplomaImageUpload = () => {};
-
-  // // handle cvImage
-  // const handleCvImageUpload = () => {};
-
   // 1. Define form.
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   // 2. Define a submit handler.
@@ -103,6 +68,7 @@ export default function RegesterForm({
           },
           (error) => {
             console.log(error.text);
+            setLoading(false);
           }
         );
       setLoading(false);
@@ -110,6 +76,8 @@ export default function RegesterForm({
         theme: "colored",
       });
     }, 2000);
+
+    reset();
   };
 
   return (
@@ -263,219 +231,6 @@ export default function RegesterForm({
                 )}
               </div>
             </div>
-
-            {/* attachemets */}
-            {/* <h2 className="text-xl font-semibold text-mainBlack text-center my-[0.5em]">
-            الملفات
-          </h2> */}
-
-            {/* first */}
-            {/* <div className="flex flex-col items-center justify-between gap-3 sm:flex-row"> */}
-            {/* id image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_idImage"
-                className="mb-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                صورة الهوية أو البطاقة الشخصية
-              </label>
-              <input
-                type="file"
-                {...register("user_idImage", {
-                  required: "من فضلك ادخل صورة",
-                })}
-                //onChange={handleIdImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_idImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[#ced4da]"
-                }`}
-              />
-              {errors?.user_idImage && (
-                <div className="text-red-500">
-                  {errors.user_idImage.message}
-                </div>
-              )}
-            </div> */}
-            {/* passport image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_passImage"
-                className="mb-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                صورة جواز السفر
-              </label>
-              <input
-                type="file"
-                {...register("user_passImage", {
-                  required: "من فضلك ادخل صورة",
-                })}
-                //onChange={handlePassImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_passImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[#ced4da]"
-                }`}
-              />
-              {errors?.user_passImage && (
-                <div className="text-red-500">
-                  {errors.user_passImage.message}
-                </div>
-              )}
-            </div>
-          </div> */}
-
-            {/* second */}
-            {/* <div className="flex flex-col items-center justify-between gap-3 sm:flex-row"> */}
-            {/* personal image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_personalImage"
-                className="my-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                الصوره الشخصية
-              </label>
-              <input
-                type="file"
-                {...register("user_personalImage", {
-                  required: "من فضلك ادخل صورة",
-                })}
-                //onChange={handlePersonalImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_personalImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[#ced4da]"
-                }`}
-              />
-              {errors?.user_personalImage && (
-                <div className="text-red-500">
-                  {errors.user_personalImage.message}
-                </div>
-              )}
-            </div> */}
-            {/* mw2hl image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_mw2hlImage"
-                className="my-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                اخر مؤهل حصلت عليه
-              </label>
-              <input
-                type="file"
-                {...register("user_mw2hlImage", {
-                  required: "من فضلك ادخل مؤهل",
-                })}
-                //onChange={handleMw2hlImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg,.pdf,.docx"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_mw2hlImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[rgb(206,212,218)]"
-                }`}
-              />
-              {errors?.user_mw2hlImage && (
-                <div className="text-red-500">
-                  {errors.user_mw2hlImage.message}
-                </div>
-              )}
-            </div>
-          </div> */}
-
-            {/* third */}
-            {/* <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
-            {/* thanawya image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_thanawyaImage"
-                className="my-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                شهادة الثانوية
-              </label>
-              <input
-                type="file"
-                {...register("user_thanawyaImage", {
-                  required: "من فضلك ادخل الثانوية",
-                })}
-                //onChange={handleThanawyaImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg,.pdf,.docx"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_thanawyaImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[rgb(206,212,218)]"
-                }`}
-              />
-              {errors?.user_thanawyaImage && (
-                <div className="text-red-500">
-                  {errors.user_thanawyaImage.message}
-                </div>
-              )}
-            </div> */}
-
-            {/* deploma image */}
-            {/* <div className="w-full">
-              <label
-                htmlFor="user_deplomaImage"
-                className="my-[0.5em] font-semibold text-[1rem] text-mainBlack"
-              >
-                شهادة اي دبلومه بساعات معتمده
-              </label>
-              <input
-                type="file"
-                {...register("user_deplomaImage", {
-                  required: "من فضلك ادخل دبلومه",
-                })}
-                //onChange={handleDeplomaImageUpload}
-                autoFocus
-                accept=".jpg,.png,.jpeg,.pdf,.docx"
-                className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                  errors?.user_deplomaImage
-                    ? "border-[rgb(239,68,68)]"
-                    : "border-[rgb(206,212,218)]"
-                }`}
-              />
-              {errors?.user_deplomaImage && (
-                <div className="text-red-500">
-                  {errors.user_deplomaImage.message}
-                </div>
-              )}
-            </div>
-          </div> */}
-
-            {/* cv */}
-            {/* <div className="w-full">
-            <label
-              htmlFor="user_cvImage"
-              className="my-[0.5em] font-semibold text-[1rem] text-mainBlack"
-            >
-              السيره الذاتية
-            </label>
-            <input
-              type="file"
-              {...register("user_cvImage", {
-                required: "من فضلك ادخل السيره",
-              })}
-              //onChange={handleCvImageUpload}
-              autoFocus
-              accept=".jpg,.png,.jpeg,.pdf,.docx"
-              className={`border border-[#ced4da] rounded-md py-3 px-2 my-[0.5em] text-mainGray focus:outline-none w-full ${
-                errors?.user_cvImage
-                  ? "border-[rgb(239,68,68)]"
-                  : "border-[rgb(206,212,218)]"
-              }`}
-            />
-            {errors?.user_cvImage && (
-              <div className="text-red-500">{errors.user_cvImage.message}</div>
-            )}
-          </div> */}
 
             <div className="w-full mx-auto text-center mt-[1em]">
               <CustomButton

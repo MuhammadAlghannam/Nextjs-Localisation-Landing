@@ -1,4 +1,5 @@
 // Nextjs
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 // componenets
@@ -19,6 +20,20 @@ import MyScrollToTop from "@/components/custom/component/MyScrollToTop";
 // translate
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+
+// metaData
+export const metadata: Metadata = {
+  title: "Home Page | Global Solutions for Training and Education",
+  description:
+    "This is the home page - Global Solutions for Training and Education  Platform, Teaching, E-Learning",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "ar-SA" : "/ar",
+      "en-US": "/en"
+    },
+  },
+};
 
 export default function Home() {
   const locale = useLocale();

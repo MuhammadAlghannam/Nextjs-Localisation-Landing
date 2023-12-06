@@ -10,13 +10,14 @@ import { useFooterLinks } from "@/utils/data";
 import { Link } from "react-scroll";
 
 // icons
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  EnvelopeIcon,
   MapPinIcon,
   PhoneIcon,
-  EnvelopeIcon,
-  ChevronLeftIcon,
 } from "@heroicons/react/24/solid";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 interface FooterProps {
   title1: string;
@@ -61,7 +62,7 @@ export default function Footer({
             alt="logo"
             width={200}
             height={100}
-            priority
+            quality={60}
             className="object-contain"
           />
           <p className="font-medium text-[0.9rem] my-[1em] text-white">
@@ -171,7 +172,13 @@ export default function Footer({
                   duration={500}
                   className="flex items-center font-semibold text-white cursor-pointer text-md"
                 >
-                  <ChevronLeftIcon className="w-[1.3rem] h-[1.3rem] text-white" />{" "}
+                  {locale === "en" ? (
+                    
+                    <ChevronRightIcon className="w-[1.3rem] h-[1.3rem] text-white" />
+                  ) : (
+                    <ChevronLeftIcon className="w-[1.3rem] h-[1.3rem] text-white" />
+                  )}
+
                   {link.title}
                 </Link>
               </li>
@@ -195,7 +202,12 @@ export default function Footer({
                   duration={500}
                   className="flex items-center font-semibold text-white cursor-pointer text-md"
                 >
-                  <ChevronLeftIcon className="w-[1.3rem] h-[1.3rem] text-white" />{" "}
+                  {locale === "en" ? (
+                    
+                    <ChevronRightIcon className="w-[1.3rem] h-[1.3rem] text-white" />
+                  ) : (
+                    <ChevronLeftIcon className="w-[1.3rem] h-[1.3rem] text-white" />
+                  )}
                   {link.title}
                 </Link>
               </li>

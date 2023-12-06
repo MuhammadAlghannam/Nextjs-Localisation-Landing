@@ -21,8 +21,8 @@ export default function EduModle({
       </Dialog.Trigger>
 
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-20 DialogOverlay bg-black/50" />
-        <Dialog.Content className="DialogContent fixed z-30 sm:w-full w-[90%] max-w-md p-4 -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow sm:p-8 change__dir top-1/2 left-1/2">
+        <Dialog.Overlay className="fixed inset-0 z-[100] DialogOverlay bg-black/50" />
+        <Dialog.Content className="DialogContent fixed z-[120] sm:w-full w-[90%] max-w-md p-4 -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow sm:p-8 change__dir top-1/2 left-1/2">
           <Dialog.Close className="float-right">
             <XMarkIcon className="w-7 h-7 text-secondary" />
           </Dialog.Close>

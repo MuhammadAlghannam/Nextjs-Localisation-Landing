@@ -139,10 +139,12 @@ export default function AboutUs({
               <Image
                 src="/written-task-min.jpg"
                 alt="about"
-                width={500}
-                height={500}
-                priority
-                className="object-contain w-auto h-auto mx-auto"
+                width={100}
+                height={100}
+                sizes="(max-width: 425px) 50vw, 75vw"
+                style={{ width: "100%", height: "auto" }}
+                quality={60}
+                className="object-contain mx-auto"
               />
             </m.div>
           </LazyMotion>

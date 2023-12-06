@@ -18,12 +18,12 @@ export default function TopHead({ title, desc }: TopHeadProps) {
         viewport={{ once: true }}
         className="text-center"
       >
-        <h3 className="mb-3 text-lg font-medium sm:text-xl text-secondary">
+        <h1 className="mb-3 text-lg font-medium sm:text-xl text-secondary">
           {title}
-        </h3>
-        <h2 className="text-2xl font-bold sm:text-3xl text-maniBlack">
+        </h1>
+        <p className="text-2xl font-bold sm:text-3xl text-maniBlack">
           {desc}
-        </h2>
+        </p>
       </m.div>
     </LazyMotion>
   );
